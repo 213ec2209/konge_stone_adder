@@ -56,3 +56,16 @@ async def test_addition_with_carry(dut):
     )
 
     assert dut.Sum.value == 65537, "Carry-in addition result is incorrect"
+
+
+def test_konge_stone_adder_runner():
+    sim = os.getenv("SIM", "icarus")
+    proj_path = Path(__file__).resolve().parent.parent
+    sources = [proj_path / "sources/konge_stone_adder.v"]
+    runner = get_runner(sim)
+    runner.build(
+        sources=sources,
+        hdl_toplevel="konge_stone_adder",
+        always=True,
+    )
+    runner.test(hdl_toplevel="konge_stone_adder", test_module="test_konge_stone_adder")
