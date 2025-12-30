@@ -6,6 +6,7 @@ from cocotb import start_soon
 from cocotb.clock import Clock
 from cocotb.triggers import FallingEdge, NextTimeStep, ReadOnly, RisingEdge, Timer
 from cocotb_tools.runner import get_runner
+
 @cocotb.test()
 async def example_test(dut):
     pass
