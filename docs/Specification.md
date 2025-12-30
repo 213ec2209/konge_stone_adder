@@ -4,6 +4,7 @@
 
 Addition is one of the most fundamental operations in digital systems and plays a critical role in processors, digital signal processors (DSPs), cryptographic engines, and hardware accelerators. The performance of an adder directly impacts the overall speed and throughput of a system. Traditional adders such as ripple-carry adders suffer from long propagation delays because each carry bit must wait for the previous bit to complete.
 
+
 To overcome this limitation, **Parallel Prefix Adders (PPAs)** are widely used in high-performance digital designs. Among them, the **Kogge–Stone Adder (KSA)** is a fast adder architecture that computes carry signals in parallel using a prefix tree structure. It achieves logarithmic carry propagation delay, making it one of the fastest known adder designs. The Kogge–Stone adder trades increased wiring complexity and area for very high speed, which makes it suitable for timing-critical arithmetic paths.
 
 The Kogge–Stone adder described in this document is a **16-bit combinational parallel prefix adder** that supports an external carry-in and produces a 17-bit sum output along with carry signals.
